@@ -1,0 +1,362 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: fit-content;
+  font-family: "Arial", sans-serif;
+  overflow-y: hidden;
+  background-color: rgba(128, 0, 128, 0.144);
+}
+
+.sectionOne {
+  position: relative; /* importante para os cantos */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  /* background-color: rgba(128, 0, 128, 0.211); tom suave de fundo */
+  border-top: 4px solid purple; /* borda mais evidente */
+  border-right: 3px solid purple; /* borda mais evidente */
+  border-left: 3px solid purple; /* borda mais evidente */
+  border-bottom: 3px solid #b8860b;
+  box-shadow: 0 5px 200px -1px #b8860b;
+  /* border-radius: 20px; */
+  max-width: 600px;
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+  font-family: "Georgia", serif;
+}
+
+
+/* Cantos decorativos */
+.corner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.arrow-shadow {
+  position: absolute;
+  bottom: 100px;
+  left: 33%;
+  width: 150px;
+  height: 34px;
+  animation: bounce-shadow 2s infinite;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  rotate: 46deg !important;
+  width: 30px;
+  height: 30px;
+  background-image: url("../public/assets/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+
+.corner-top-left {
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  width: 1000px;
+  background-image: url("../public/assets/flor.svg");
+  background-repeat: repeat;
+}
+
+.corner-top-two-left {
+  position: absolute;
+  top: -40px;
+  left: -50;
+  width: 1000px;
+  background-image: url("../public/assets/flor.svg");
+  background-repeat: repeat;
+}
+
+.corner-mid-left {
+  position: absolute !important;
+  top: 350px !important;
+  left: -100px !important;
+
+  width: 50% !important;
+  height: 50% !important;
+
+  background-image: url("../public/assets/florFina.svg");
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  
+}
+
+.corner-mid-right {
+  position: absolute;
+  top: 350px;
+  left: 270px;
+  rotate: 340deg;
+
+  width: 50%;
+  height: 50%;
+
+  background-image: url("../public/assets/florFina.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.container-title h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(
+    120deg,
+    #b8860b 30%,
+    #ffd700 45%,
+    #fff8dc 50%,
+    #ffd700 55%,
+    #b8860b 70%
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 8px rgba(255,215,0,0.4);
+
+  animation: goldShine 2.5s linear infinite;
+}
+
+@keyframes goldShine {
+  to {
+    background-position: -200% center;
+  }
+}
+
+.container-title h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #444;
+}
+
+
+
+.container-title h3 {
+  font-size: 1.2em;
+  color: #5a3e2b;
+  font-weight: 400;
+}
+
+.container-title {
+  transform-origin: center;
+}
+
+
+.container-title h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.container-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-img img {
+  border-radius: 30px 0 30px 0;
+  border-radius: 30px 0 30px 0;
+  border: 3px solid #b8860b;
+  box-shadow: 0 10px 50px #b8860b;
+}
+
+.sectionTwo {
+  margin-top: 100px !important;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.textSectionTwo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.textSectionTwo p {
+  max-width: 300px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.container-img p {
+  max-width: 300px;
+  margin: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: justify;
+}
+
+.carrousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrousel .content {
+  display: flex;
+  width: max-content;
+  animation: slide 12s linear infinite;
+}
+
+.carrousel img {
+  width: 200px;
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 30px 0 30px 0;
+  border: 3px solid #b8860b;
+  box-shadow: 0 20px 20px #b8860b;
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* vai deslizar até metade (ajuste conforme número de imagens) */
+  }
+}
+
+.s-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.s-hero .content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+}
+
+.s-hero .card {
+  flex-shrink: 0;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-hero .card img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
+.sectionThree {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  text-align: center;
+  line-height: 1.8;
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+.confirm {
+  font-weight: bold;
+  color: #8b5e3c;
+  margin-top: 20px;
+}
+
+.loc {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.btn-whatsapp {
+  display: inline-block;
+  padding: 14px 28px;
+  margin-top: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: #111;
+  background: linear-gradient(
+    145deg,
+    #fff2b2,
+    #ffd700,
+    #cfa300
+  );
+
+  border-radius: 40px;
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.4),
+    0 0 12px rgba(255, 215, 0, 0.6);
+
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(255, 215, 0, 0.8);
+}
+
+.btn-whatsapp:active {
+  transform: scale(0.96);
+}
